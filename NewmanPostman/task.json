@@ -334,6 +334,14 @@
       "groupName": "report"
     },
     {
+      "name": "htmlExtraNoSyntaxHighlighting",
+      "type": "boolean",
+      "label": "Disable HTML Extra Syntax Highlighting.",
+      "defaultValue": true,
+      "helpMarkDown": "Use this optional flag to disable syntax highlighting (speeds up report opening).",
+      "groupName": "report"
+    },
+    {
       "label": "HTML Extra Report Title",
       "name": "htmlExtraReportTitle",
       "groupName": "report",

@@ -1,7 +1,7 @@
-import path = require('path');
 import tl = require('azure-pipelines-task-lib/task');
 import trm = require('azure-pipelines-task-lib/toolrunner');
 import isurl = require('is-url');
+import path = require('path');
 
 function GetToolRunner(collectionToRun: string) {
     let pathToNewman = tl.getInput('pathToNewman', false);
@@ -47,6 +47,8 @@ function GetToolRunner(collectionToRun: string) {
     newman.argIf(htmlExtraLogs, ['--reporter-htmlextra-logs']);
     let htmlExtraTestPaging = tl.getBoolInput('htmlExtraTestPaging');
     newman.argIf(htmlExtraTestPaging, ['--reporter-htmlextra-testPaging']);
+    let htmlExtraNoSyntaxHighlighting = tl.getBoolInput('htmlExtraNoSyntaxHighlighting');
+    newman.argIf(htmlExtraNoSyntaxHighlighting, ['--reporter-htmlextra-noSyntaxHighlighting']);
     let htmlExtraReportTitle = tl.getInput('htmlExtraReportTitle');
     newman.argIf(typeof htmlExtraReportTitle != 'undefined' && htmlExtraReportTitle, ['--reporter-htmlextra-title', htmlExtraReportTitle]);
 
@@ -95,7 +97,7 @@ function GetToolRunner(collectionToRun: string) {
     newman.argIf(typeof globalVariable != 'undefined' && tl.filePathSupplied('dataFile'), ['--iteration-data', dataFile]);
 
     let folder = tl.getInput('folder');
-    if(typeof folder != 'undefined' && folder) {
+    if (typeof folder != 'undefined' && folder) {
         const splitted = folder.split(",");
         splitted.forEach(folder => {
             newman.arg(['--folder', folder.trim()]);
