@@ -1,15 +1,15 @@
 {
   "manifestVersion": 1,
-  "id": "Newman-Postman",
-  "version": "3.0.28",
-  "name": "Newman the cli Companion for Postman",
+  "id": "NewmanCli",
+  "version": "3.0.33",
+  "name": "Newman CLI for Postman",
   "scopes": [],
   "description": "Using Newman, one can effortlessly run and test a Postman Collections directly from the command-line. Now in a task! ** Not an official task **",
   "publisher": "AbbMarcinMarczak",
   "icons": {
     "default": "static/images/logo-mark-404.png"
   },
-  "galleryFlags": ["Public"],
+  "galleryFlags": [],
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"

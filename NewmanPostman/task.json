@@ -1,12 +1,12 @@
 {
   "id": "4e74f3b0-c5b7-48cf-970e-8d7071818557",
-  "name": "NewmanPostman",
+  "name": "NewmanCli",
   "friendlyName": "Newman the cli Companion for Postman",
   "description": "Using Newman, one can effortlessly run and test a Postman Collections directly from the command-line. Now in a task!",
   "helpMarkDown": "[More Information](https://github.com/carlowahlstedt/NewmanPostman_VSTS_Task/blob/master/README.md)",
   "category": "Test",
   "visibility": ["Build", "Release"],
-  "author": "Carlo Wahlstedt",
+  "author": "Marcin Marczak",
   "version": {
     "Major": 4,
     "Minor": 0,
